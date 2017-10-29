@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		EEB4CA811FA5CF460075FEAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB4CA801FA5CF460075FEAB /* AppDelegate.swift */; };
-		EEB4CA831FA5CF460075FEAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB4CA821FA5CF460075FEAB /* ViewController.swift */; };
 		EEB4CA861FA5CF460075FEAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEB4CA841FA5CF460075FEAB /* Main.storyboard */; };
 		EEB4CA881FA5CF460075FEAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEB4CA871FA5CF460075FEAB /* Assets.xcassets */; };
 		EEB4CA8B1FA5CF460075FEAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEB4CA891FA5CF460075FEAB /* LaunchScreen.storyboard */; };
+		EEB4CA941FA5CFDC0075FEAB /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB4CA931FA5CFDC0075FEAB /* RootTabBarController.swift */; };
+		EEB4CA961FA5D0330075FEAB /* Item1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB4CA951FA5D0330075FEAB /* Item1ViewController.swift */; };
+		EEB4CA981FA5D1800075FEAB /* Item1NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB4CA971FA5D1800075FEAB /* Item1NavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EEB4CA7D1FA5CF460075FEAB /* CustomOrientationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomOrientationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB4CA801FA5CF460075FEAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EEB4CA821FA5CF460075FEAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EEB4CA851FA5CF460075FEAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EEB4CA871FA5CF460075FEAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEB4CA8A1FA5CF460075FEAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EEB4CA8C1FA5CF460075FEAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEB4CA931FA5CFDC0075FEAB /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
+		EEB4CA951FA5D0330075FEAB /* Item1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item1ViewController.swift; sourceTree = "<group>"; };
+		EEB4CA971FA5D1800075FEAB /* Item1NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item1NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,24 @@
 		EEB4CA7F1FA5CF460075FEAB /* CustomOrientationDemo */ = {
 			isa = PBXGroup;
 			children = (
+				EEB4CA921FA5CF830075FEAB /* View Controllers */,
 				EEB4CA801FA5CF460075FEAB /* AppDelegate.swift */,
-				EEB4CA821FA5CF460075FEAB /* ViewController.swift */,
 				EEB4CA841FA5CF460075FEAB /* Main.storyboard */,
 				EEB4CA871FA5CF460075FEAB /* Assets.xcassets */,
 				EEB4CA891FA5CF460075FEAB /* LaunchScreen.storyboard */,
 				EEB4CA8C1FA5CF460075FEAB /* Info.plist */,
 			);
 			path = CustomOrientationDemo;
+			sourceTree = "<group>";
+		};
+		EEB4CA921FA5CF830075FEAB /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EEB4CA931FA5CFDC0075FEAB /* RootTabBarController.swift */,
+				EEB4CA951FA5D0330075FEAB /* Item1ViewController.swift */,
+				EEB4CA971FA5D1800075FEAB /* Item1NavigationController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +150,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEB4CA831FA5CF460075FEAB /* ViewController.swift in Sources */,
 				EEB4CA811FA5CF460075FEAB /* AppDelegate.swift in Sources */,
+				EEB4CA961FA5D0330075FEAB /* Item1ViewController.swift in Sources */,
+				EEB4CA981FA5D1800075FEAB /* Item1NavigationController.swift in Sources */,
+				EEB4CA941FA5CFDC0075FEAB /* RootTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +293,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 23X5258S94;
 				INFOPLIST_FILE = CustomOrientationDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.desmonddai.CustomOrientationDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -292,6 +309,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 23X5258S94;
 				INFOPLIST_FILE = CustomOrientationDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.desmonddai.CustomOrientationDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
