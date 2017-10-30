@@ -1,28 +1,28 @@
 //
-//  Item1ViewController.swift
+//  FromPresentViewController.swift
 //  CustomOrientationDemo
 //
-//  Created by DAIXinming on 29/10/2017.
+//  Created by Desmond Dai on 30/10/2017.
 //  Copyright © 2017 Xinming DAI. All rights reserved.
 //
 
 import UIKit
 
-class Item1ViewController: UIViewController {
+class FromPresentViewController: UIViewController {
 
     override var shouldAutorotate: Bool {
-        print("Item1ViewController - shouldAutorotate")
-        return true
+        print("FromPresentViewController - shouldAutorotate")
+        return false
     }
     
     override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
-        print("Item1ViewController - preferred")
-        return .portrait
+        print("FromPresentViewController - preferred")
+        return .landscapeLeft
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        print("Item1ViewController - supported")
-        return [.landscapeLeft, .portrait]
+        print("FromPresentViewController - supported")
+        return .landscapeLeft
     }
     
     override func viewDidLoad() {
@@ -36,13 +36,10 @@ class Item1ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func pushVCBtnDidTap(_ sender: UIButton) {
-        performSegue(withIdentifier: "pushVC", sender: nil)
+    @IBAction func dismissBtnDidTap(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func presentVCBtnDidTap(_ sender: UIButton) {
-        performSegue(withIdentifier: "presentVC", sender: nil)
-    }
     /*
     // MARK: - Navigation
 
