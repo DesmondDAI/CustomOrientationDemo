@@ -1,30 +1,15 @@
 //
-//  FromPresentViewController.swift
+//  Item2FromPushViewController.swift
 //  CustomOrientationDemo
 //
-//  Created by Desmond Dai on 30/10/2017.
+//  Created by Desmond Dai on 31/10/2017.
 //  Copyright © 2017 Xinming DAI. All rights reserved.
 //
 
 import UIKit
 
-class FromPresentViewController: UIViewController {
+class Item2FromPushViewController: UIViewController {
 
-    override var shouldAutorotate: Bool {
-        print("FromPresentViewController - shouldAutorotate")
-        return false
-    }
-    
-    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
-        print("FromPresentViewController - preferred")
-        return .landscapeLeft
-    }
-    
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        print("FromPresentViewController - supported")
-        return .landscapeLeft
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,10 +21,7 @@ class FromPresentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func dismissBtnDidTap(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
-    }
-    
+
     /*
     // MARK: - Navigation
 

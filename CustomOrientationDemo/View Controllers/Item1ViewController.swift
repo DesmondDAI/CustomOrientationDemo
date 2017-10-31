@@ -11,31 +11,18 @@ import UIKit
 class Item1ViewController: UIViewController {
 
     override var shouldAutorotate: Bool {
-        print("Item1ViewController - shouldAutorotate")
-        return true
-    }
-    
-    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
-        print("Item1ViewController - preferred")
-        return .portrait
+        let shouldRotate = false
+        print("Item1ViewController - shouldAutorotate: \(shouldRotate)")
+        return shouldRotate
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         print("Item1ViewController - supported")
-        return [.landscapeLeft, .portrait]
+        return [.portrait]
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    // MARK: - Actions
     @IBAction func pushVCBtnDidTap(_ sender: UIButton) {
         performSegue(withIdentifier: "pushVC", sender: nil)
     }
@@ -43,14 +30,4 @@ class Item1ViewController: UIViewController {
     @IBAction func presentVCBtnDidTap(_ sender: UIButton) {
         performSegue(withIdentifier: "presentVC", sender: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
