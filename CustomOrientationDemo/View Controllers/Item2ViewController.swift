@@ -10,6 +10,8 @@ import UIKit
 
 class Item2ViewController: UIViewController {
 
+    @IBOutlet weak var orientationStatusLabel: UILabel!
+    
     override var shouldAutorotate: Bool {
         let shouldRotate = false
         print("Item2ViewController - shouldAutorotate: \(shouldRotate)")
@@ -26,5 +28,9 @@ class Item2ViewController: UIViewController {
         let supported: UIInterfaceOrientationMask = [.landscapeLeft]
         print("Item2ViewController - supported: \(supported)")
         return supported
+    }
+    
+    // MARK: - Actions
+    @IBAction func changeOrientationStatusBtnDidTap(_ sender: UIButton) {
     }
 }

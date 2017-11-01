@@ -10,6 +10,12 @@ import UIKit
 
 class Item1ViewController: UIViewController {
 
+    @IBOutlet weak var settingsTableView: UITableView! {
+        didSet {
+            settingsTableView.dataSource = self
+        }
+    }
+    
     override var shouldAutorotate: Bool {
         let shouldRotate = false
         print("Item1ViewController - shouldAutorotate: \(shouldRotate)")
@@ -29,5 +35,32 @@ class Item1ViewController: UIViewController {
     
     @IBAction func presentVCBtnDidTap(_ sender: UIButton) {
         performSegue(withIdentifier: "presentVC", sender: nil)
+    }
+}
+
+
+extension Item1ViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch section {
+        case 0:
+            return 2
+            
+        case 1:
+            return 3
+            
+        default:
+            return 0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // TODO: choose correct cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SettingTableViewCell", for: indexPath)
+        return cell
     }
 }
