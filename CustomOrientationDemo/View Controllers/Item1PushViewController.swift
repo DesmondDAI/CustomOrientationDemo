@@ -10,14 +10,23 @@ import UIKit
 
 class Item1PushViewController: UIViewController {
 
+    @IBOutlet weak var settingLabel: UILabel!
+    
+    var settingText: String?
+    var enableAutorotate = false
+    
     override var shouldAutorotate: Bool {
-        let shouldRotate = true
-        print("Item1PushViewController - shouldAutorotate: \(shouldRotate)")
-        return shouldRotate
+        print("Item1PushViewController - shouldAutorotate: \(enableAutorotate)")
+        return enableAutorotate
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         print("Item1PushViewController - supported")
         return [.portrait, .landscapeLeft, .landscapeRight]
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        settingLabel.text = settingText
     }
 }

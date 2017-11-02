@@ -19,4 +19,10 @@ class Item1NavigationController: UINavigationController {
         print("Item1NavigationController - supported")
         return topViewController?.supportedInterfaceOrientations ?? .portrait
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Change status bar style
+        navigationBar.barStyle = .black
+    }
 }
